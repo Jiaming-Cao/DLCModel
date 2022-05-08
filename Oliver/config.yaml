@@ -1,0 +1,66 @@
+    # Project definitions (do not edit)
+Task: Oliver
+scorer: ZQ
+date: Dec23
+multianimalproject: false
+
+    # Project path (change when moving around)
+project_path: C:/DLC_model/Oliver-ZQ-2021-12-23
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  D:\CJM\Oliver\Oliver.avi:
+    crop: 0, 904, 0, 800
+bodyparts:
+- L_finger5
+- L_finger4
+- L_hand
+- R_finger2
+- R_finger3
+- R_hand
+- Neck
+- Eye
+- EarL
+- EarR
+- Nose
+- LeverBase
+- LeverEnd
+start: 0
+stop: 1
+numframes2pick: 400
+
+    # Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: plasma
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
